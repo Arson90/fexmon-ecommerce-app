@@ -11,17 +11,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-@Entity(name = "address")
+@Entity(name = "cart")
 @Getter
 @Setter
 @NoArgsConstructor
 @RequiredArgsConstructor
-public class AddressModel implements Serializable {
+public class CartModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String streetName;
-    private String streetNumber;
-    private String town;
-    private String postalCode;
+    private String productName;
+    private double productPrice;
+    private double totalPrice;
+    private int quantity;
 }
