@@ -12,5 +12,6 @@ public class ProductController {
     @GetMapping()
     public ProductModel getProductById() {
         throw new UnsupportedOperationException("Not implemented yet");
+
     }
 }
