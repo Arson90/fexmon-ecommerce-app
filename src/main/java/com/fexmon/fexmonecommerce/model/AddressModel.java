@@ -14,7 +14,6 @@ import java.io.Serializable;
 @Entity(name = "address")
 @Getter
 @Setter
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class AddressModel implements Serializable {
     @Id
