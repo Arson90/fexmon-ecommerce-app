@@ -14,7 +14,6 @@ import java.io.Serializable;
 @Entity(name = "cart")
 @Getter
 @Setter
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class CartModel implements Serializable {
     @Id
