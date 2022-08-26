@@ -1,7 +1,6 @@
 package com.fexmon.fexmonecommerce.model;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
@@ -12,9 +11,8 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @RequiredArgsConstructor
-public class CatalogModel implements Serializable {
+public class CategoryModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

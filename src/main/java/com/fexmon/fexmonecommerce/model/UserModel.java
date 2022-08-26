@@ -14,7 +14,6 @@ import java.io.Serializable;
 @Entity(name = "user")
 @Getter
 @Setter
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class UserModel implements Serializable {
     @Id

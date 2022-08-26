@@ -12,7 +12,6 @@ import java.io.Serializable;
 @Entity(name = "order")
 @Getter
 @Setter
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class OrderModel implements Serializable {
     @Id

@@ -14,12 +14,11 @@ import java.io.Serializable;
 @Entity(name = "product")
 @Getter
 @Setter
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class ProductModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String product;
+    private String productName;
     private double price;
 }
