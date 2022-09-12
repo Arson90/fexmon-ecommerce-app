@@ -26,6 +26,11 @@ public class ProductController {
         return productService.fetchProduct(productId);
     }
 
+    @GetMapping("/product/name/{productName}")
+    public ProductModel getProductByProductName(@PathVariable final String productName) {
+        return productService.fetchProductByProductName(productName);
+    }
+
     @GetMapping("/product")
     public List<ProductModel> getAllProducts() {
         return productService.fetchProductList();

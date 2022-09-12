@@ -8,6 +8,8 @@ public interface ProductService {
 
     ProductModel fetchProduct(final Long productId);
 
+    ProductModel fetchProductByProductName(final String productName);
+
     List<ProductModel> fetchProductList();
 
     ProductModel saveProduct(final ProductModel product);
