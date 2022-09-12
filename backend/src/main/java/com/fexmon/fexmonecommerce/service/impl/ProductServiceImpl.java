@@ -1,12 +1,12 @@
 package com.fexmon.fexmonecommerce.service.impl;
 
+import com.fexmon.fexmonecommerce.exception.ProductNotFoundException;
 import com.fexmon.fexmonecommerce.model.ProductModel;
 import com.fexmon.fexmonecommerce.repository.ProductRepository;
 import com.fexmon.fexmonecommerce.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -18,7 +18,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductModel fetchProduct(final Long productId) {
-        return productRepository.findById(productId).get();
+        return productRepository.findById(productId).orElseThrow(() -> ProductNotFoundException.createForProductId(productId));
     }
 
     @Override
