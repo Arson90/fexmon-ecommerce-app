@@ -1,10 +1,7 @@
 package com.fexmon.fexmonecommerce.model;
 
 import com.fexmon.fexmonecommerce.enumeration.PaymentType;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,7 +9,8 @@ import java.io.Serializable;
 @Entity(name = "order")
 @Getter
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

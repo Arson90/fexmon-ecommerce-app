@@ -1,9 +1,6 @@
 package com.fexmon.fexmonecommerce.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +11,8 @@ import java.io.Serializable;
 @Entity(name = "product")
 @Getter
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
