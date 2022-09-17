@@ -39,15 +39,15 @@ public class ProductController {
         return new ResponseEntity<>(productModel, HttpStatus.CREATED);
     }
 
-    @PutMapping("/product/{id}")
-    public ResponseEntity<ProductModel> updateProduct(@RequestBody final ProductModel product, @PathVariable final long id) {
-        final ProductModel productModel = productService.updateProduct(product, id);
+    @PutMapping("/product/{productId}")
+    public ResponseEntity<ProductModel> updateProduct(@RequestBody final ProductModel product, @PathVariable final long productId) {
+        final ProductModel productModel = productService.updateProduct(product, productId);
         return new ResponseEntity<>(productModel, HttpStatus.OK);
     }
 
-    @DeleteMapping("/product/{id}")
-    public ResponseEntity<ProductModel> deleteProduct(@PathVariable final long id) {
-        productService.deleteProduct(id);
+    @DeleteMapping("/product/{productId}")
+    public ResponseEntity<ProductModel> deleteProduct(@PathVariable final long productId) {
+        productService.deleteProduct(productId);
         return ResponseEntity.ok().build();
     }
 }
