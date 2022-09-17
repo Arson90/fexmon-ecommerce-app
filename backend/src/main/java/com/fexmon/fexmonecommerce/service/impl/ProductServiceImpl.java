@@ -22,6 +22,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public ProductModel fetchProductByProductName(final String productName) {
+        return productRepository.findByProductName(productName).orElseThrow(() -> ProductNotFoundException.createForProductName(productName));
+    }
+
+    @Override
     public List<ProductModel> fetchProductList() {
         return productRepository.findAll();
     }
