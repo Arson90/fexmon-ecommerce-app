@@ -22,32 +22,27 @@ public class ProductController {
     }
 
     @GetMapping("/product/{productId}")
-    public ResponseEntity<ProductModel> getProductById(@PathVariable final long productId) {
-        final ProductModel product = productService.fetchProduct(productId);
-        return new ResponseEntity<>(product, HttpStatus.OK);
+    public ProductModel getProductById(@PathVariable final long productId) {
+        return productService.fetchProduct(productId);
     }
 
     @GetMapping("/product")
-    public ResponseEntity<List<ProductModel>> getAllProducts() {
-        final List<ProductModel> productModels = productService.fetchProductList();
-        return new ResponseEntity<>(productModels, HttpStatus.OK);
+    public List<ProductModel> getAllProducts() {
+        return productService.fetchProductList();
     }
 
     @PostMapping("/product")
-    public ResponseEntity<ProductModel> addProduct(@RequestBody final ProductModel product) {
-        final ProductModel productModel = productService.saveProduct(product);
-        return new ResponseEntity<>(productModel, HttpStatus.CREATED);
+    public ProductModel addProduct(@RequestBody final ProductModel product) {
+        return productService.saveProduct(product);
     }
 
-    @PutMapping("/product/{productId}")
-    public ResponseEntity<ProductModel> updateProduct(@RequestBody final ProductModel product, @PathVariable final long productId) {
-        final ProductModel productModel = productService.updateProduct(product, productId);
-        return new ResponseEntity<>(productModel, HttpStatus.OK);
+    @PutMapping("/product/{id}")
+    public ProductModel updateProduct(@RequestBody final ProductModel product, @PathVariable final long id) {
+        return productService.updateProduct(product, id);
     }
 
-    @DeleteMapping("/product/{productId}")
-    public ResponseEntity<ProductModel> deleteProduct(@PathVariable final long productId) {
-        productService.deleteProduct(productId);
-        return ResponseEntity.ok().build();
+    @DeleteMapping("/product/{id}")
+    public void deleteProduct(@PathVariable final long id) {
+        productService.deleteProduct(id);
     }
 }
