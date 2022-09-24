@@ -23,23 +23,23 @@ insert into user (id, first_name, last_name, email, country) values (20, 'Chadd'
 
 # PRODUCTS
 
-insert into product (id, product_name, price) values (1, 'Blue Curacao - Marie Brizard', '136.43');
-insert into product (id, product_name, price) values (2, 'Limes', '96.60');
-insert into product (id, product_name, price) values (3, 'Nacho Chips', '133.98');
-insert into product (id, product_name, price) values (4, 'Duck - Whole', '137.68');
-insert into product (id, product_name, price) values (5, 'Pepper - Paprika, Spanish', '134.45');
-insert into product (id, product_name, price) values (6, 'Paper Towel Touchless', '22.19');
-insert into product (id, product_name, price) values (7, 'Beans - Yellow', '186.37');
-insert into product (id, product_name, price) values (8, 'Flour - Teff', '177.39');
-insert into product (id, product_name, price) values (9, 'Flower - Dish Garden', '177.65');
-insert into product (id, product_name, price) values (10, 'Noodles - Steamed Chow Mein', '245.18');
-insert into product (id, product_name, price) values (11, 'Island Oasis - Ice Cream Mix', '122.10');
-insert into product (id, product_name, price) values (12, 'Bonito Flakes - Toku Katsuo', '145.14');
-insert into product (id, product_name, price) values (13, 'Capon - Whole', '25.73');
-insert into product (id, product_name, price) values (14, 'Veal - Osso Bucco', '30.07');
-insert into product (id, product_name, price) values (15, 'Nut - Almond, Blanched, Ground', '223.99');
-insert into product (id, product_name, price) values (16, 'Yeast - Fresh, Fleischman', '130.46');
-insert into product (id, product_name, price) values (17, 'Turnip - White', '17.43');
-insert into product (id, product_name, price) values (18, 'Mushroom - Enoki, Dry', '130.41');
-insert into product (id, product_name, price) values (19, 'Sauce - Rosee', '162.72');
-insert into product (id, product_name, price) values (20, 'Liners - Banana, Paper', '107.27');
+insert into product (product_id, product_name, price) values (1, 'Blue Curacao - Marie Brizard', '136.43');
+insert into product (product_id, product_name, price) values (2, 'Limes', '96.60');
+insert into product (product_id, product_name, price) values (3, 'Nacho Chips', '133.98');
+insert into product (product_id, product_name, price) values (4, 'Duck - Whole', '137.68');
+insert into product (product_id, product_name, price) values (5, 'Pepper - Paprika, Spanish', '134.45');
+insert into product (product_id, product_name, price) values (6, 'Paper Towel Touchless', '22.19');
+insert into product (product_id, product_name, price) values (7, 'Beans - Yellow', '186.37');
+insert into product (product_id, product_name, price) values (8, 'Flour - Teff', '177.39');
+insert into product (product_id, product_name, price) values (9, 'Flower - Dish Garden', '177.65');
+insert into product (product_id, product_name, price) values (10, 'Noodles - Steamed Chow Mein', '245.18');
+insert into product (product_id, product_name, price) values (11, 'Island Oasis - Ice Cream Mix', '122.10');
+insert into product (product_id, product_name, price) values (12, 'Bonito Flakes - Toku Katsuo', '145.14');
+insert into product (product_id, product_name, price) values (13, 'Capon - Whole', '25.73');
+insert into product (product_id, product_name, price) values (14, 'Veal - Osso Bucco', '30.07');
+insert into product (product_id, product_name, price) values (15, 'Nut - Almond, Blanched, Ground', '223.99');
+insert into product (product_id, product_name, price) values (16, 'Yeast - Fresh, Fleischman', '130.46');
+insert into product (product_id, product_name, price) values (17, 'Turnip - White', '17.43');
+insert into product (product_id, product_name, price) values (18, 'Mushroom - Enoki, Dry', '130.41');
+insert into product (product_id, product_name, price) values (19, 'Sauce - Rosee', '162.72');
+insert into product (product_id, product_name, price) values (20, 'Liners - Banana, Paper', '107.27');

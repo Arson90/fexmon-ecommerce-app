@@ -10,6 +10,6 @@ public class ProductNotFoundException extends RuntimeException{
     }
 
     public static ProductNotFoundException createForProductName(final String productName) {
-        return new ProductNotFoundException(String.format("Product %s not found", productName ));
+        return new ProductNotFoundException(String.format("Product %s not found", productName));
     }
 }
