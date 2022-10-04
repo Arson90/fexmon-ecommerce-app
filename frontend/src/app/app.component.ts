@@ -16,16 +16,12 @@ export class AppComponent implements OnInit{
   constructor(private router: Router, private cartService: CartService) {
   }
   ngOnInit(): void {
-    this.getCurrentProductNumber()
+   // this.getCurrentProductNumber()
   }
 
   public getCurrentProductNumber(): void {
     this.cartService.getCartById(1).subscribe((response: Cart) => {
       this.currentProductNumber = response.productModelSet.length;
     });
-  }
-
-  public goToCartPage(cartPage: string): void {
-    this.router.navigate([`${cartPage}`]);
   }
 }
