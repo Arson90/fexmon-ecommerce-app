@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from "../../../services/product.service";
+import {ProductService} from "../../../services/product/product.service";
 import {Product} from "../../../types/product";
 import {NgForm} from "@angular/forms";
+import {CartService} from "../../../services/cart/cart.service";
+import {HttpErrorResponse} from "@angular/common/http";
 
 
 @Component({
@@ -15,7 +17,7 @@ export class MainPageComponent implements OnInit {
   productName: string;
   price: number;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -25,22 +27,31 @@ export class MainPageComponent implements OnInit {
   public getProducts(): void {
    this.productService.getProducts().subscribe((response: Product[] ) => {
      this.products = response;
-   });
+   },
+     (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+     );
   }
 
-  public getProductById(productId: number): void {
-    this.productService.getProductById(productId).subscribe((response: Product ) => {
-      this.productById = response;
-    });
-  }
+  // public getProductById(productId: number): void {
+  //   this.productService.getProductById(productId).subscribe((response: Product ) => {
+  //     this.productById = response;
+  //   });
+  // }
 
-  public addProduct(addForm: NgForm): void {
-    const productData: Product = {
-      productName: addForm.value.productName,
-      price: addForm.value.price
-    };
-    this.productService.addProduct(productData).subscribe((response: Product) => {
-      this.productById = response;
-    });
+  // public addProduct(addForm: NgForm): void {
+  //   const productData: Product = {
+  //     productName: addForm.value.productName,
+  //     price: addForm.value.price
+  //   };
+  //   this.productService.addProduct(productData).subscribe((response: Product) => {
+  //     this.productById = response;
+  //   });
+  // }
+
+  public addProduct(productId: number): void {
+    console.log("DUPSKO " + productId);
+    this.cartService.addProductToCart(productId);
   }
 }

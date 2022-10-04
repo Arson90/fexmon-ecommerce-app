@@ -6,7 +6,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity(name = "order")
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,12 +14,13 @@ import java.io.Serializable;
 public class OrderModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "order_id")
     private Long id;
     private String customerName;
     private String email;
     private String phoneNumber;
-    @OneToOne
-    @JoinColumn(name = "address_id", nullable = false)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "address_id")
     private AddressModel address;
     private String country;
     @Enumerated(value = EnumType.STRING)

@@ -1,47 +1,3 @@
-<!--<h5>Raised Buttons</h5>-->
-<!--<br><br>-->
-<!--<div>-->
-<!--  <button mat-raised-button color="primary" (click)="getProducts()">Get Products</button><br><br>-->
-<!--  <input type="number" #productID><br><br>-->
-<!--  <button mat-raised-button color="primary" (click)="getProductById(productID.valueAsNumber)">Get Product By Id</button>-->
-
-<!--  <button mat-raised-button color="primary">Add Product</button>-->
-<!--  <button mat-raised-button color="primary">Update Product</button>-->
-<!--  <button mat-raised-button color="primary">Delete Product</button>-->
-<!--</div><br><br>-->
-<!--<div>-->
-<!--  <table>-->
-<!--    <thead>-->
-<!--    <th>ID</th>-->
-<!--    <th>Product Name</th>-->
-<!--    <th>Price</th>-->
-<!--    </thead>-->
-<!--    <tbody>-->
-<!--    <tr *ngFor="let product of products">-->
-<!--      <td>{{product.productName}}</td>-->
-<!--      <td>{{product.price}}</td>-->
-<!--    </tr>-->
-<!--    </tbody>-->
-<!--  </table>-->
-<!--</div>-->
-
-<!--<form #addForm="ngForm" (ngSubmit)="addProduct(addForm)">-->
-<!--  <div>-->
-<!--    <input type="text"  placeholder="productName" name="productName" ngModel>-->
-<!--  </div>-->
-<!--  <div>-->
-<!--    <input type="text"  placeholder="price" name="price" ngModel>-->
-<!--  </div>-->
-<!--  <div>-->
-<!--    <button mat-raised-button color="primary" type="submit">Submit</button>-->
-<!--  </div>-->
-<!--</form>-->
-<!--<div>-->
-<!--  {{addForm.value}}-->
-<!--  {{productById.price}}-->
-<!--  {{productById.productName}}-->
-<!--</div>-->
-
 <!-- Section-->
 <section class="py-5">
   <div class="container px-4 px-lg-5 mt-5">
@@ -62,12 +18,12 @@
                 <div class="bi-star-fill"></div>
               </div>
               <!-- Product price-->
-              ${{product.price}}
+              {{product.price}}
             </div>
           </div>
           <!-- Product actions-->
           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+            <button class="text-center" (click)="addProduct(product.id)">Add to cart</button>
           </div>
         </div>
       </div>

@@ -7,11 +7,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { MatButtonModule}  from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from "@angular/forms";
+import { ProductUpdatePageComponent } from './components/pages/product-update-page/product-update-page.component';
+import { UserPageComponent } from './components/pages/user-page/user-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    ProductUpdatePageComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,
@@ -24,4 +28,4 @@ import { FormsModule } from "@angular/forms";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

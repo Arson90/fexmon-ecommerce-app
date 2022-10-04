@@ -6,6 +6,8 @@ import {LoginPageComponent} from "./components/pages/login-page/login-page.compo
 import {CheckoutPageComponent} from "./components/pages/checkout-page/checkout-page.component";
 import {ConfirmationPageComponent} from "./components/pages/confirmation-page/confirmation-page.component";
 import {RegistrationPageComponent} from "./components/pages/registration-page/registration-page.component";
+import {ProductPageComponent} from "./components/pages/product-page/product-page.component";
+import {ProductUpdatePageComponent} from "./components/pages/product-update-page/product-update-page.component";
 
 const routes: Routes = [
   { path: 'cart', component: CartPageComponent},
@@ -13,7 +15,10 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutPageComponent},
   { path: 'confirmation', component: ConfirmationPageComponent},
   { path: 'registration', component: RegistrationPageComponent},
-  { path: 'main', component: MainPageComponent }
+  { path: 'main', component: MainPageComponent },
+  { path: 'product', component: ProductPageComponent},
+  { path: 'product-update/:productId', component: ProductUpdatePageComponent},
+  { path: '', redirectTo: 'main', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -23,5 +28,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   CartPageComponent, LoginPageComponent, CheckoutPageComponent,
-  ConfirmationPageComponent, RegistrationPageComponent, MainPageComponent
+  ConfirmationPageComponent, RegistrationPageComponent, MainPageComponent,
+  ProductPageComponent, ProductUpdatePageComponent
 ]

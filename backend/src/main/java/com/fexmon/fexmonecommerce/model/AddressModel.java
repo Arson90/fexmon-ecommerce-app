@@ -2,13 +2,10 @@ package com.fexmon.fexmonecommerce.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity(name = "address")
+@Entity(name = "Address")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,6 +13,7 @@ import java.io.Serializable;
 public class AddressModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "address_id")
     private Long id;
     private String streetName;
     private String streetNumber;

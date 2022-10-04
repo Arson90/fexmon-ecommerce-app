@@ -1,14 +1,14 @@
 package com.fexmon.fexmonecommerce.model;
 
 import lombok.*;
+import org.hibernate.annotations.Cascade;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
 
-@Entity(name = "cart")
+@Entity(name = "Cart")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,9 +16,10 @@ import java.io.Serializable;
 public class CartModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cart_id")
     private Long id;
-    private String productName;
-    private double productPrice;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<ProductModel> productModelSet;
     private double totalPrice;
     private int quantity;
 }

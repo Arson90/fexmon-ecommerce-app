@@ -1,7 +1,7 @@
 package com.fexmon.fexmonecommerce.controller;
 
 import com.fexmon.fexmonecommerce.model.ProductModel;
-import com.fexmon.fexmonecommerce.model.UserModel;
+//import com.fexmon.fexmonecommerce.model.UserModel;
 import com.fexmon.fexmonecommerce.service.impl.ProductServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
@@ -46,8 +46,8 @@ public class ProductController {
         return productService.updateProduct(product, id);
     }
 
-    @DeleteMapping("/product/{id}")
-    public void deleteProduct(@PathVariable final long id) {
-        productService.deleteProduct(id);
+    @DeleteMapping("/product/{productId}")
+    public void deleteProduct(@PathVariable final long productId) {
+        productService.deleteProduct(productId);
     }
 }

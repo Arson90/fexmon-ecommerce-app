@@ -1,0 +1,25 @@
+<div class="row">
+  <form>
+    <div class="col-md-6 mb-3">
+      <label for="productName">Product name</label>
+      <input type="text" class="form-control" id="productName" [(ngModel)]="product.productName" name="productName">
+      <!--    <div class="invalid-feedback">-->
+      <!--      Valid first name is required.-->
+      <!--    </div>-->
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+      <!--    <div class="invalid-feedback">-->
+      <!--      Valid last name is required.-->
+      <!--    </div>-->
+    </div>
+  </form>
+<!--  <a class="btn btn-outline-success" (click)="onUpdate(product)" [routerLink]="['/product']" role="button">Save</a>-->
+  <a class="btn btn-outline-success" (click)="onUpdate(product)" role="button">Save</a>
+</div>
+
+<p>
+  <a class='btn btn-default' (click)="onBack()">Back</a>
+</p>
+
