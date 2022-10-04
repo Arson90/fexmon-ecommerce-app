@@ -12,6 +12,10 @@ export class CartService {
   constructor(public http: HttpClient) {
   }
 
+  public createEmptyCart(): Observable<Cart>{
+    return this.http.post<Cart>(`${this.apiUrl}/cart`, null);
+  }
+
   public addProductToCart(productId: number): Observable<Cart> {
     console.log("Test" + productId);
     return this.http.put<Cart>(`${this.apiUrl}/cart/product/${productId}`, null);

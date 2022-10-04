@@ -8,12 +8,14 @@ import { MatButtonModule}  from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from "@angular/forms";
 import { ProductUpdatePageComponent } from './components/pages/product-update-page/product-update-page.component';
+import { UserPageComponent } from './components/pages/user-page/user-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    ProductUpdatePageComponent
+    ProductUpdatePageComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,

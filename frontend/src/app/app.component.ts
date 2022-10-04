@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {CartService} from "./services/cart/cart.service";
 import {Cart} from "./types/cart";
-import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -16,11 +15,16 @@ export class AppComponent implements OnInit{
   constructor(private router: Router, private cartService: CartService) {
   }
   ngOnInit(): void {
-   // this.getCurrentProductNumber()
+   this.getCurrentProductNumber()
   }
 
   public getCurrentProductNumber(): void {
+    console.log("Test");
     this.cartService.getCartById(1).subscribe((response: Cart) => {
+      console.log("Dupa" + response);
+      if (response===null) {
+
+      };
       this.currentProductNumber = response.productModelSet.length;
     });
   }

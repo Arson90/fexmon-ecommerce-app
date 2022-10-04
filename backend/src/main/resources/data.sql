@@ -1,25 +1,25 @@
 #USERS
 
-insert into user (id, first_name, last_name, email, country) values (1, 'Townsend', 'Henstridge', 'townsend.henstridge@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (2, 'Eleanora', 'Slight', 'eleanora.slight@fexmon.com', 'Italy');
-insert into user (id, first_name, last_name, email, country) values (3, 'Dotti', 'Pontefract', 'dotti.pontefract@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (4, 'Ginger', 'Calvert', 'ginger.calvert@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (5, 'Gerda', 'Pettitt', 'gerda.pettitt@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (6, 'Cherlyn', 'Hurlestone', 'cherlyn.hurlestone@fexmon.com', 'France');
-insert into user (id, first_name, last_name, email, country) values (7, 'Gorden', 'Lyptrade', 'gorden.lyptrade@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (8, 'Florida', 'Rosson', 'florida.rosson@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (9, 'Jerad', 'McKendo', 'jerad.mckendo@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (10, 'Charis', 'Labeuil', 'charis.labeuil@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (11, 'Benyamin', 'Shemmans', 'benyamin.shemmans@fexmon.com', 'France');
-insert into user (id, first_name, last_name, email, country) values (12, 'Micah', 'Dangl', 'micah.dangl@fexmon.com', 'France');
-insert into user (id, first_name, last_name, email, country) values (13, 'Reynold', 'Velden', 'reynold.velden@fexmon.com', 'France');
-insert into user (id, first_name, last_name, email, country) values (14, 'Phoebe', 'Phittiplace', 'phoebe.phittiplace@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (15, 'Connor', 'Pigney', 'connor.pigney@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (16, 'Idalina', 'Tolmie', 'idalina.tolmie@fexmon.com', 'Poland');
-insert into user (id, first_name, last_name, email, country) values (17, 'Meridith', 'Clarkson', 'meridith.clarkson@fexmon.com', 'Spain');
-insert into user (id, first_name, last_name, email, country) values (18, 'Nataline', 'Athow', 'nataline.athow@fexmon.com', 'France');
-insert into user (id, first_name, last_name, email, country) values (19, 'Aron', 'Gudgin', 'aron.gudgin@fexmon.com', 'France');
-insert into user (id, first_name, last_name, email, country) values (20, 'Chadd', 'Rosenblum', 'chadd.rosenblum@fexmon.com', 'France');
+insert into user (user_id, first_name, last_name, email, country) values (1, 'Townsend', 'Henstridge', 'townsend.henstridge@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (2, 'Eleanora', 'Slight', 'eleanora.slight@fexmon.com', 'Italy');
+insert into user (user_id, first_name, last_name, email, country) values (3, 'Dotti', 'Pontefract', 'dotti.pontefract@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (4, 'Ginger', 'Calvert', 'ginger.calvert@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (5, 'Gerda', 'Pettitt', 'gerda.pettitt@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (6, 'Cherlyn', 'Hurlestone', 'cherlyn.hurlestone@fexmon.com', 'France');
+insert into user (user_id, first_name, last_name, email, country) values (7, 'Gorden', 'Lyptrade', 'gorden.lyptrade@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (8, 'Florida', 'Rosson', 'florida.rosson@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (9, 'Jerad', 'McKendo', 'jerad.mckendo@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (10, 'Charis', 'Labeuil', 'charis.labeuil@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (11, 'Benyamin', 'Shemmans', 'benyamin.shemmans@fexmon.com', 'France');
+insert into user (user_id, first_name, last_name, email, country) values (12, 'Micah', 'Dangl', 'micah.dangl@fexmon.com', 'France');
+insert into user (user_id, first_name, last_name, email, country) values (13, 'Reynold', 'Velden', 'reynold.velden@fexmon.com', 'France');
+insert into user (user_id, first_name, last_name, email, country) values (14, 'Phoebe', 'Phittiplace', 'phoebe.phittiplace@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (15, 'Connor', 'Pigney', 'connor.pigney@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (16, 'Idalina', 'Tolmie', 'idalina.tolmie@fexmon.com', 'Poland');
+insert into user (user_id, first_name, last_name, email, country) values (17, 'Meridith', 'Clarkson', 'meridith.clarkson@fexmon.com', 'Spain');
+insert into user (user_id, first_name, last_name, email, country) values (18, 'Nataline', 'Athow', 'nataline.athow@fexmon.com', 'France');
+insert into user (user_id, first_name, last_name, email, country) values (19, 'Aron', 'Gudgin', 'aron.gudgin@fexmon.com', 'France');
+insert into user (user_id, first_name, last_name, email, country) values (20, 'Chadd', 'Rosenblum', 'chadd.rosenblum@fexmon.com', 'France');
 
 # PRODUCTS
 
