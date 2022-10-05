@@ -1,6 +1,7 @@
 package com.fexmon.fexmonecommerce.controller;
 
 import com.fexmon.fexmonecommerce.model.ProductModel;
+import com.fexmon.fexmonecommerce.model.UserModel;
 import com.fexmon.fexmonecommerce.service.impl.ProductServiceImpl;
 import org.springframework.web.bind.annotation.*;
 

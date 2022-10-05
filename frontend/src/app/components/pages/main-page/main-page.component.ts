@@ -58,6 +58,5 @@ export class MainPageComponent implements OnInit {
     this.cartService.addProductToCart(productId).subscribe(data => {
       console.log(data);
     });
-
   }
 }
