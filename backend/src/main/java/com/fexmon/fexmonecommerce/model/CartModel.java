@@ -5,6 +5,7 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -22,4 +23,10 @@ public class CartModel implements Serializable {
     private Set<ProductModel> productModelSet;
     private double totalPrice;
     private int quantity;
+
+    public CartModel(Set<ProductModel> productModelSet, double totalPrice, int quantity) {
+        this.productModelSet = productModelSet;
+        this.totalPrice = totalPrice;
+        this.quantity = quantity;
+    }
 }

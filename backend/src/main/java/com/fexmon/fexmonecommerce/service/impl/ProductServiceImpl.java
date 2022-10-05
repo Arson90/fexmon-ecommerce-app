@@ -18,12 +18,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductModel fetchProduct(final Long productId) {
-        return productRepository.findById(productId).orElseThrow(() -> ProductNotFoundException.createForProductId(productId));
+        return productRepository.findById(productId)
+                .orElseThrow(() -> ProductNotFoundException.createForProductId(productId));
     }
 
     @Override
     public ProductModel fetchProductByProductName(final String productName) {
-        return productRepository.findByProductName(productName).orElseThrow(() -> ProductNotFoundException.createForProductName(productName));
+        return productRepository.findByProductName(productName)
+                .orElseThrow(() -> ProductNotFoundException.createForProductName(productName));
     }
 
     @Override

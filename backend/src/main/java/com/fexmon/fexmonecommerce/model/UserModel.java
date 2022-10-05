@@ -10,6 +10,7 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class UserModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,5 +19,6 @@ public class UserModel implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
-    private String country;
+    @OneToOne
+    private CartModel cart;
 }

@@ -21,7 +21,6 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-    //this.getProductById(2);
   }
 
   public getProducts(): void {
@@ -51,7 +50,14 @@ export class MainPageComponent implements OnInit {
   // }
 
   public addProduct(productId: number): void {
-    console.log("DUPSKO " + productId);
-    this.cartService.addProductToCart(productId);
+    this.cartService.getAllCart().subscribe(data => {
+      if (data.length === 0) {
+        this.cartService.createEmptyCart();
+      }
+    });
+    this.cartService.addProductToCart(productId).subscribe(data => {
+      console.log(data);
+    });
+
   }
 }

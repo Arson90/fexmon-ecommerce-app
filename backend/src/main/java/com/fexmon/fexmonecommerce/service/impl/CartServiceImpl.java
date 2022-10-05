@@ -33,7 +33,7 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public CartModel saveCart() {
-        return cartRepository.save(new CartModel(1L,new HashSet<>(), 0.0, 1));
+        return cartRepository.save(new CartModel(new HashSet<>(), 0.0, 1));
     }
 
     @Override

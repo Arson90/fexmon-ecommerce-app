@@ -19,13 +19,13 @@ export class AppComponent implements OnInit{
   }
 
   public getCurrentProductNumber(): void {
-    console.log("Test");
-    this.cartService.getCartById(1).subscribe((response: Cart) => {
-      console.log("Dupa" + response);
-      if (response===null) {
-
-      };
-      this.currentProductNumber = response.productModelSet.length;
+    this.cartService.getAllCart().subscribe(data => {
+      if (data.length > 0) {
+        this.cartService.getCartById(1).subscribe((response: Cart) => {
+          this.currentProductNumber = response.productModelSet.length;
+          console.log("num" + this.currentProductNumber);
+        });
+      }
     });
   }
 }
